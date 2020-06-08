@@ -1,0 +1,6 @@
+{
+    "bot_key" : "put your bot key here",
+    "bot_console_channel" : "insert console channels id",
+    "bot_name" : "Brave test Bot",
+    "ignore_channels" : "[]"
+}

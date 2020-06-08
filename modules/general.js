@@ -28,13 +28,15 @@ function unix_uptime_to_date_string(unix_time = 0) {
 	let return_string = '';
 	
 	if (unix_time >= 86400000) {
-		return_string += `${Math.floor(unix_time/86400000)}:`;
+		return_string += `${Math.floor(unix_time/86400000)} days, `;
 	} 
 	if (unix_time >= 3600000) {
-		return_string += `${date.getHours()-1}:`;
+		return_string += `${date.getHours()-1} hours, `;
 	} 
-	return_string += `${date.getMinutes()}:`;
-	return_string += `${date.getSeconds()}`;
+	if (unix_time >= 60000) {
+		return_string += `${date.getMinutes()} minutes, `;
+	}
+	return_string += `${date.getSeconds()} seconds`;
 	return return_string
 }
 

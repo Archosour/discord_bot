@@ -2,6 +2,23 @@ x.0.0   Mayor code change, new style, general rewrite
 0.x.0   new features, new set of commands
 0.0.x   new commands to excisting set, bug fixes, general maintaintenes
 
+v 1.2.0
+    rename messages, urls to json. corrected syntax
+    introduced configs folder, moved all configs into itm except bot_config
+    rename bot_key to bot_config
+    added 'console channel' and 'ignore channels' to bot_config
+    uptime command now has a user friendly format as return
+    bugfix
+        testbot now accept ge commands in test channels.
+        testbot now ignores commands outside of test channels
+        added forgotten breaks in the get commands
+        added forgotten default cases in commands
+        uptime command nolonger shows minutes when bot is less then 60 secunds up
+    added
+        function to check if all JSON files are loaded and contain the right amount of keys
+        progression system, the more toy chat, the higher your level will be, commands dont count
+    started to run produnction and test bots (no more testing in a live bot ^^)
+
 
 v 1.1.0
     moved to modules
