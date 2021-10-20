@@ -1,5 +1,9 @@
 {
     "brave_bot_command_list" : "http://archosaur.nl/bravebot.html",
-    "github_brave_bot" : "https://github.com/Archosour/discord_bot"
+    "github_brave_bot" : "https://github.com/Archosour/discord_bot",
+    "github_brave_testbot" : "https://github.com/Archosour/discord_test_bot",
+    "gameIP" : "http://192.168.1.100:3000",
+    "nasIP" : "http://192.168.1.101:3000",
+    "lotro_server_ips" : ["198.252.160.98", "198.252.160.99", "198.252.160.100", "198.252.160.101", "198.252.160.102", "198.252.160.103", "198.252.160.104", "198.252.160.105", "198.252.160.106", "198.252.160.107"]
 }
 

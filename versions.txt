@@ -2,6 +2,177 @@ x.0.0   Mayor code change, new style, general rewrite
 0.x.0   new features, new set of commands
 0.0.x   new commands to excisting set, bug fixes, general maintaintenes
 
+known bugs:
+    http request doesn't redirect
+    discord new guild member doesnt work
+
+v4.0.1
+    bugfix
+        typo in the shout-out for theGreenEyedGamer fixed
+
+V4.0.0
+    command timeout removed
+    discord fuctions move to own module
+    twitch fuctions move to own module
+    streamdeck fuctions move to own module
+    cleared general from command/discord/twitch stuff
+    placed commands into objects with their variables
+    condensing discord message events into one handler
+    moved discord exp to discord_bot module
+    general.log now uses default timestamp in files
+    adjusted discord_bot to new convention
+    added eorzeatime and eorzeadate commands
+    added check to general.unix_timestamp_to_date_string if year is to be included
+    converted general.unix_timestamp_to_date_string to return always 2 digits
+    adding cheer and sub tracker
+    added stream start countdowm for start screen
+    updated twitch chat to discord and vice versa (in owm channel)
+    
+    bugfix
+        ping / pong command had hardcoded (test) prefix
+        Discord twitch chat channel refers to twitch server id instead of bot_console_server id
+        end of twtich stream is now correctly detected
+    hotfix
+        filter on username to fix lack of proper mod check in discord
+
+
+V3.4.0
+    start stream currency
+    condensing Twitch command - message - reward
+    
+v3.3.0
+    start turtle integration
+    
+
+v3.2.1
+    commented out unused code
+    replaced messages to main
+    replaced paths to main
+    rewrite of commandprosessor to nem format (without the - for args)
+    rewrite commands to new format
+    commented out twitter
+    removed twitter
+    lineout the variables in main
+    moved command prefix to config file
+    added fsPromise to discord_bot module
+    get info now uses prefix from config
+    bot notification now uses prefix from config
+    added dynamic prefix to streamdeck converter
+
+v3.2.0
+    integrating express as preb for streamdeck
+    added a check for undefined or empty message in commandhandler
+
+v3.1.2
+    made a mode for testbot for twitch 
+    renamed ramble commans into raffle
+    check twitch raw message with search instead of include
+
+    bugfix
+        discord !get botinfo now follows version from main file
+        changed username into userstate.username for twitch cheer
+
+v3.1.1
+    disabled Twitter due to authentication problems
+    for testbot the command prefix is now '?!' 
+
+v3.1.0
+    merge twitch bot info this discord/twitter bot
+    added command processor to replace command handelers
+    rename client (discord) to discord_client
+    rename client (twitch) to twitch_client
+    added platform controle on commands where applicable
+
+    bugfix
+        added check for response on twitter get hashtag
+        new tweets always marked as retweet due to strict comparison to null (imposible)
+
+
+v3.0.0
+    based on v1.3.1
+    dropped the userinfo command
+    moved many of the commands over to the commands module
+    converted bot notification command to a toggle
+    updated the commandhandeler to make it equal to the twitch bot
+    runescape ge added with extrernal script to keep prices up to date
+    added twitter hastag listener for #LOTRO with a filter
+    added OS command
+    added username check to all commands where applicable
+    removed os module from commands module
+    added twitter channel id to bot_config
+    
+
+    known issues
+        version hardcoded in botinfo command
+        no sub in discord
+        no mod parameter from incomming message
+        cant listen to status updates on twitter
+    bugfix
+        get hardwareinfo-2 working again
+        fixed type in usersname in command module
+        fixed missing check on twitter error status
+        added default for switch in get_botinfo
+        added default for switch in github
+
+
+v2.0.0
+    move to seperate file for commands instead of a huge switch 
+    moved 'one-liner' commands to files
+    moved 'multy-liner' to command files
+    removed ping_monitor_interval as a variable
+
+    bugfix
+        lotro servers ping spamming a lot in console when servers are down. now only when it is/goes down
+        myping for lotro down and timeout never fire, was unused code
+    
+    This version was canceled. moved from 1.3.1 to 3.0.0
+    
+
+v1.3.1
+    rework hardware/servers info
+    added logger function for console/discord/files 
+    reduced redundant code in general for hardwareinfo
+    reduced http request for items in runescape to a single one
+    added nas and game IPs to URLs
+    moved lotro server IPs to URLs
+    command slicer now based on the prefix length instead of hardcoded (1)
+    renamed chat timeout variable due to typo
+    in main file switch to arrow functions
+    replaced all console.log with the general.logger
+        main, runescape, discord_bot
+    bugfix
+        negative hours in uptime/timestamp
+        days in timestamp not working correctly, count up when 12 hours behind
+        memory now shows up correctly in MB (about 1% off)
+        correcting timestamp for log files
+        lotro server down was did had an undefined string
+        lotro server status finally updating
+        new attempt at pinging lotro server
+        ping now is a command with a prefix
+    hotfix
+        runescape api now on new URL
+
+v1.3.0
+    runescape item info made for rs3 as well
+    runescape ge price loaded when fetch fails
+    runescape ge price written to file when fetch succeed
+    runescape init for first time setup
+    runescape moved obj check to the top of function
+    runescape rename write_to_item_time to write_to_item_file
+    runescape added single ge item command
+
+    added paramater to disable notifications of leveling
+    added hardware command to get bot system info and game / nas info
+    moved console server id to bot_config
+    update the website with the latest commands
+    converted all vars to let in runscape fetchData function 
+    bugfix
+        no longer the message 'wrong channel' in console when typing in test-channels
+        user get notification again when leveling up
+        lotro timeout added to switching offline, hopefully we catch the downtime this time
+        random undefined in console => strict comparison on statuscode in runescape http request, it can also be a string alongside a number
+        username not defined in discord_bot.add_new_discord_user
+        
 v 1.2.0
     rename messages, urls to json. corrected syntax
     introduced configs folder, moved all configs into itm except bot_config
@@ -18,7 +189,6 @@ v 1.2.0
         function to check if all JSON files are loaded and contain the right amount of keys
         progression system, the more toy chat, the higher your level will be, commands dont count
     started to run produnction and test bots (no more testing in a live bot ^^)
-
 
 v 1.1.0
     moved to modules

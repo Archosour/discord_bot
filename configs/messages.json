@@ -5,6 +5,10 @@
     "discord_reply_on_timeout" : "Slow down please, Im not fast enough!",
 
     "OSRS_error_message" : "no info loaded or no valid command",
+    "OSRS_error_invalid_id" : "Sorry, invalid item id.",
+
+    "bot_notifications_on" : "You have anabled all notifications from BraveBot. If you would like to disable notifications again please type !disable notifications in any of its channels. \nThe disable does only work in this channel. If have to enable it in every channel if thats what you want.",
+    "bot_notifications_off" : "You have disabled all notifications from BraveBot. If you would like to get notifications again please type !enable notifications in any of its channels. \nThe disable does only work in this channel. If have to disable it in every channel if thats what you want.",
 
     "no_permission_to_use_command" : "You have no permission to use this command",
     "no_command_available" : "no command found"
