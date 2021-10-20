@@ -3,5 +3,12 @@
     "bot_console_channel" : "channel ID of your console channel",
     "bot_console_server" : "server ID of your test server",
     "bot_name" : "Brave test Bot",
-    "ignore_channels" : "[Array of all channels to ignore, mostly for testing alongside the live version]"
+    "ignore_channels" : "[Array of all channels to ignore, mostly for testing alongside the live version]",
+    "twitch_channel_id" : "some 18 numbers",
+    "twitch_server_id" : "some 18 numbers",
+    "username" : "username",
+    "password" : "oauth:somethingsomething",
+    "test_bot" : false,
+    "express_port" : 5050,
+    "command_prefix" : "!"
 }
